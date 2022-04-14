@@ -1,0 +1,72 @@
+.env file: It is used to store some private data such as API Keys, passwords, and so on that are related to the project.
+
+And to access the contents of env file, we need a method called config() which is there in python-decouple module.
+Pyhton-decouple module is used to secure our data from external source. 
+Separating settings from the rest of the source code is needed as it contains some information that should not be exposed.
+To know more about python-decouple module and its method config - https://www.pythonpool.com/python-decouple/
+
+With statement: Using the with statement makes the code compact and much more readable.
+                with statement in Python is used in exception handling to make the code cleaner and much more readable. 
+                It simplifies the management of common resources like file streams. 
+                We'd most likely find it when working with file streams. For example, the statement ensures that 
+                the file stream process doesn't block other processes if an exception is raised, but terminates properly.
+
+ip address: ipify provides a simple public ip address API. Click here: https://www.ipify.org/
+
+pyttsx3 module: pyttsx is a cross-platform text to speech library which is platform-independent. 
+        The major advantage of using this library for text-to-speech conversion is that it works offline. 
+
+SpeechRecognition module: This allows us to convert audio into text for further processing.
+    ° This module has recognizer class which helps us recognize the audio.
+    ° The same module has a microphone class which helps us use the microphone of the device.
+    ° Using the recognize_google() method from the Recognizer class, we try to recognize the audio. 
+    ° The recognize_google() method performs speech recognition on the audio passed to it, using the Google Speech Recognition API.
+
+pyaudio module: It is useful in playing and recording audio on a variety of platforms. 
+
+pywhatkit module: This is an easy-to-use library that will help us interact with the browser very easily.
+                ° It has a playonyt() method that accepts a topic as an argument. It then searches the topic on youtube and plays 
+                  the most appropriate video. It uses PyAutoGUI under the hood.
+
+                ° It has a search() method (that accepts a topic as an argument) that helps us search on Google instantly.
+
+                ° It has a sendwhatmsg_instantly() method that accepts two arguments- phone number and message.
+ 
+wikipedia module: This module is used to fetch a variety of information from the Wikipedia website.
+                ° Summary of any title can be obtained by using summary method. 
+                  It accepts 2 arguments (2nd one is optional). They are:
+                  Title of the topic(I am giving title as command which is stored in query) and then we can set no. of lines in result
+                  as sentences = no.of lines we want in result. It returns the summary in string format.
+
+requests module: This is an elegant and simple HTTP library for Python that allows us to send HTTP/1.1 requests extremely easily. 
+                  There’s no need to manually add query strings to our URLs, or to form-encode our PUT & POST data — but nowadays, just use the json method.
+                  It is basically making request to a webpage.
+                ° The get() method sends a GET request to the specified url. The GET method is used to retrieve information from the given server using a given URL.
+
+smtplib module: Simple Mail Transfer Protocol (SMTP) is a protocol, which handles sending e-mail and routing e-mail between mail servers.
+              ° It defines an SMTP client session object that can be used to send mail to any Internet machine with an SMTP or ESMTP listener daemon.
+              ° SMTP class manages a connection to an SMTP or ESMTP server.
+                In my case, I create an object of the SMTP class from the smtplib module. It takes host and port number as the parameters.
+            
+              ° starttls() method of SMTP class puts the connection to the SMTP server into TLS mod
+
+              ° login() method of SMTP class logs in on an SMTP server that requires authentication.
+ 
+os module: The OS module in python provides functions for interacting with the operating system.
+    ° os.listdir() method return the list of all files and directories in the specified path.
+      If we don’t specify any directory, then list of files and directories in the current working directory will be returned.
+
+    ° os.startfile() method allows us to “start” a file with its associated program. 
+      In other words, we can open a file with it’s associated program, just like when we double-click a PDF and it opens in Adobe Reader.
+
+    ° os.path.join() method is used to join various path components. For more details: https://www.geeksforgeeks.org/python-os-path-join-method/?ref=lbp
+      Ex- in our play_music function, we are joining the music dir's path with a random song path.
+
+    ° os.system():  We can execute system command by using os.system() function. For more details: https://www.geeksforgeeks.org/python-os-system-method/
+      Ex - We can open cmd using os.system() function
+
+    ° os.system() function is not recommended though its works fine. Instead use Python subprocess module to execute system commands.
+      os.system() is not recommended way to execute shell commands. We can run shell commands by using subprocess.call() function.
+      For more details about subprocess module, check this out: https://www.journaldev.com/16140/python-system-command-os-subprocess-call
+
+pyjokes module: One line jokes for programmers.
