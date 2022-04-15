@@ -1,5 +1,3 @@
-# from urllib.request import urlopen
-# import json
 from decouple import config
 import requests 
 import wikipedia
@@ -17,9 +15,6 @@ def find_my_ip():
     # ipify provides a simple public ip address API. We just need to make a GET request on the URL provided by ipify
     ip_address = requests.get('https://api.ipify.org?format=json').json()
     return ip_address["ip"]
-
-    # ip_address = requests.get('https://api.ipify.org').text
-    # return ip_address
 
 def search_on_wikipedia(query):
     results = wikipedia.summary(query, sentences = 2)
@@ -75,7 +70,6 @@ def get_weather_report(city):
 def get_trending_movies():
     trending_movies = []
     res = requests.get(f"https://api.themoviedb.org/3/trending/movie/day?api_key={TMDB_API_KEY}").json()
-    # print(res)    # It will show JSON response from the requests
     results = res["results"]
     for r in results:
         trending_movies.append(r["original_title"])

@@ -9,6 +9,7 @@ paths = {
 def open_notepad():
     os.startfile(paths['notepad'])
     # os.system('notepad')      
+
 def close_notepad():
     os.system("taskkill /f /im notepad.exe")
 
@@ -17,18 +18,14 @@ def open_calculator():
     # os.system('calc')      
 
 def open_cmd():
-    # os.system('start cmd')
-    sp.call('start cmd', shell = True)
+    # os.system('start cmd')   # This will work
+    sp.run('start cmd', shell = True)
 
 def open_camera():
-    # os.system('start camera')
-    # sp.run('start microsoft.windows.camera:', shell = True)
-    sp.call('start microsoft.windows.camera:', shell = True)
+    # os.system('start camera')  # does not work
+    sp.run('start microsoft.windows.camera:', shell = True)
 
 def play_music():
     songs = os.listdir(paths['music_dir'])
     return songs
     # print(*songs, sep = '\n')    # It will print all the songs present in the music_dir
-
-
-# print(os.getcwd())    # The current working directory is the folder in which the Python script is operating.

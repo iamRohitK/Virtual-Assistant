@@ -23,7 +23,7 @@ engine = pyttsx3.init('sapi5')    # sapi5 is a Microsoft Speech API that helps u
 
 # Set voice
 voices = engine.getProperty('voices')  # The pyttsx3 module supports three voices first is male and the second(& 3rd) is female which is provided by “sapi5” for windows.
-engine.setProperty('voice', voices[2].id)   # 3rd voice is Zira's voice
+engine.setProperty('voice', voices[2].id)  
 
 engine.setProperty('rate', 180)     # Set rate. Integer speech rate in words per minute. The base value is 200
 engine.setProperty('volume', 1.0)   # Set volume. Floating point volume in the range of 0.0 to 1.0 inclusive
@@ -54,6 +54,7 @@ def take_user_input():
     # Takes user input, recognizes it using speech recognition module and converts it into text
     
     r = sr.Recognizer()    # The Recognizer class within the speech_recognition module helps us recognize the audio.
+
     # So, With microphone as source, we try to listen to the audio using listen() method in the recognizer class.
     with sr.Microphone() as source:    # The same module has microphone class gives us access to the microphone of the device. 
         print("Listening...")
@@ -70,7 +71,6 @@ def take_user_input():
         if not 'exit' and not 'stop' and not 'bye' in query:
             speak(choice(opening_text))
         elif 'exit' in query or 'stop' in query or 'bye' in query:
-        # elif 'exit' or 'stop' or 'bye' in query:
             hour = datetime.now().hour
             speak('Thanks for using me sir!')
             if hour>=21 or hour<5:
@@ -101,7 +101,6 @@ if __name__ == '__main__':
         elif 'open calculator' in query:
             speak("Opening calculator, sir")
             open_calculator()
-
 
         elif 'open cmd' in query or 'open command prompt' in query:
             speak("Opening command prompt, sir")
@@ -222,9 +221,3 @@ if __name__ == '__main__':
 
         elif 'will you be my girlfriend' in query or 'will you be my boyfriend' in query:
             speak('I am not sure as of now. But would love to, someday!')
-
-        # elif 'ok ab main itna bhi kuch khaas nahin' in query:
-        #     speak('I am not praising you!')
-
-        # elif "chal jhuti" in query:
-            # speak("No, seriously!")

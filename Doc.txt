@@ -69,4 +69,10 @@ os module: The OS module in python provides functions for interacting with the o
       os.system() is not recommended way to execute shell commands. We can run shell commands by using subprocess.call() function.
       For more details about subprocess module, check this out: https://www.journaldev.com/16140/python-system-command-os-subprocess-call
 
+subprocess module: shell argument (which defaults to False) specifies whether to use the shell as the program to execute. 
+                   If shell is True, it is recommended to pass args as a string rather than as a sequence.
+                   Ref this to see why subprocess is recommended over os.system(): https://python.land/operating-system/python-subprocess#caveats
+                   passing shell = True is not safe though. For more details, check the above link
+                   subprocess.run() ref: https://linuxhint.com/execute_shell_python_subprocess_run_method/
+
 pyjokes module: One line jokes for programmers.
