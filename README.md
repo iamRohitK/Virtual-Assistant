@@ -22,3 +22,7 @@
 * Tells a randome programming joke using pyjokes library.
 * Gives advice using Advice Slip API.
 * Can answer some casually asked questions like how are you, who are you.
+
+## These are the following modules used in this project:
+
+[SpeechRecognition](https://pypi.org/project/SpeechRecognition/) | [pyttsx3](https://pypi.org/project/pyttsx3/) | [pywhatkit](https://pypi.org/project/pywhatkit/) | [wikipedia](https://pypi.org/project/wikipedia/) | [requests](https://pypi.org/project/requests/) | [python-decouple]() | [PyAudio](https://pypi.org/project/PyAudio/) | [datetime](https://docs.python.org/3/library/datetime.html) | [smptlib](https://pypi.org/project/secure-smtplib/) | [random](https://pypi.org/project/random2/) | [pyjokes](https://pypi.org/project/pyjokes/) | [os](https://docs.python.org/3/library/os.html) | [subprocess](https://docs.python.org/3/library/subprocess.html) | [sys](https://docs.python.org/3/library/sys.html)
