@@ -23,7 +23,7 @@ engine = pyttsx3.init('sapi5')    # sapi5 is a Microsoft Speech API that helps u
 
 # Set voice
 voices = engine.getProperty('voices')  # The pyttsx3 module supports three voices first is male and the second(& 3rd) is female which is provided by “sapi5” for windows.
-engine.setProperty('voice', voices[2].id)  
+engine.setProperty('voice', voices[1].id)  
 
 engine.setProperty('rate', 180)     # Set rate. Integer speech rate in words per minute. The base value is 200
 engine.setProperty('volume', 1.0)   # Set volume. Floating point volume in the range of 0.0 to 1.0 inclusive
